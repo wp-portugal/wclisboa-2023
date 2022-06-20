@@ -1,0 +1,10 @@
+// Cores do site.
+--wp--preset--color--primary: #000;
+
+// Botões do formulário.
+.wp-block-button__link {
+	border-radius: 4px;
+	white-space: nowrap;
+	background-color: var(--wp--preset--color--primary);
+	border-style: none;
+}
