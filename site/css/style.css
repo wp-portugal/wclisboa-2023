@@ -3,7 +3,7 @@
 
 // Botões do formulário.
 .wp-block-button__link {
-	border-radius: 4px;
+	border-radius: 3px;
 	white-space: nowrap;
 	background-color: var(--wp--preset--color--primary);
 	border-style: none;
