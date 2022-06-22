@@ -8,6 +8,9 @@
 }
 
 /* Organizadores */
+.wordcamp-organizers li:not(:last-child) {
+	border-bottom: 1px solid #cccccc;
+}
 .wordcamp-image__avatar-container img {
     border-radius: 50%;
 }
