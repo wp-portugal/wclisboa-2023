@@ -1,3 +1,10 @@
+/* small */
+p.small {
+	font-size: 0.8em;
+	margin-block-start: 0.3em;
+	margin-block-end: 0.3em;
+}
+
 /* Botões do formulário. */
 .wp-block-button__link {
 	border-radius: 3px;
