@@ -10,6 +10,7 @@
 /* Organizadores */
 .wordcamp-organizers li:not(:last-child) {
 	border-bottom: 1px solid #cccccc;
+	padding-bottom: 2em;
 }
 .wordcamp-image__avatar-container img {
     border-radius: 50%;
