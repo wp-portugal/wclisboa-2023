@@ -27,6 +27,10 @@ p.small {
     	float: left;
     	margin-right: 1em;
 	}
+	.wordcamp-image__avatar-container img {
+		width: 100px;
+		height: 100px;
+	}
 }
 .wordcamp-organizers__title {
 	font-weight: 600;
