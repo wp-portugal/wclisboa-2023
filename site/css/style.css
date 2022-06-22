@@ -7,7 +7,7 @@
 	cursor: pointer;
 }
 
-/* Avatars */
+/* Organizadores */
 .wordcamp-image__avatar-container img {
     border-radius: 50%;
 }
@@ -16,4 +16,11 @@
     	float: left;
     	margin-right: 1em;
 	}
+}
+.wordcamp-organizers__title {
+	font-weight: 600;
+}
+.wordcamp-organizers__content h3 {
+	font-weight: 400;
+	font-size: 1.5em;
 }
