@@ -14,8 +14,8 @@ p.small {
 	cursor: pointer;
 }
 
-/* Home */
-
+/* Home - Hide title and featured image */
+.home main > div:first-child,
 .home .wp-block-post-title {
 	display: none;
 }
