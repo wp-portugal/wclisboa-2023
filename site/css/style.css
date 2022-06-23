@@ -45,3 +45,9 @@ p.small {
 	font-weight: 400;
 	font-size: 1.5em;
 }
+
+/* Fix featured images - Remove extra space and separator */
+main > div:first-child > hr,
+main > div:first-child + div.wp-block-spacer {
+	display: none;
+}
