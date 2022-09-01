@@ -10,6 +10,12 @@ p.small {
 	margin-block-end: 0.3em;
 }
 
+/* Links em nova janela */
+a[target="_blank"]::after {
+	  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+	margin: 0 3px 0 5px;
+}
+
 /* Corrigir cores do menu nas páginas de notícias */
 .wclx23header nav a,
 .wclx23header nav a .wp-block-navigation-item__label {
