@@ -1,3 +1,8 @@
+/* Utils */
+.hide {
+	display: none;
+}
+
 /* small */
 p.small {
 	font-size: 0.8em;
@@ -12,12 +17,6 @@ p.small {
 	border-style: none;
 	background-color: #000000;
 	cursor: pointer;
-}
-
-/* Home - Hide title and featured image */
-.home main > div:first-child,
-.home .wp-block-post-title {
-	display: none;
 }
 
 /* Organizadores */
@@ -52,8 +51,17 @@ main > div:first-child + div.wp-block-spacer {
 	display: none;
 }
 
-/* Hide featured images on pages. only used for Open Graph */
-.page-slug-contacto .wp-block-post-featured-image {
+/* Hide featured images on pages. Only used for Open Graph */
+.home main > div:first-child,
+.home .wp-block-post-title,
+.page-slug-contacto .wp-block-post-featured-image,
+.page-slug-english .wp-block-post-featured-image,
+.page-slug-noticias-news .wp-block-post-featured-image,
+.page-slug-localizacao .wp-block-post-featured-image,
+.page-slug-codigo-de-conduta .wp-block-post-featured-image,
+.page-slug-code-of-conduct .wp-block-post-featured-image,
+.page-slug-location .wp-block-post-featured-image,
+.page-slug-contact .wp-block-post-featured-image {
 	display: none;
 }
 
