@@ -11,8 +11,8 @@ p.small {
 }
 
 /* Corrigir cores do menu nas páginas de notícias */
-.wclx23header a,
-.wclx23header a .wp-block-navigation-item__label {
+.wclx23header nav a,
+.wclx23header nav a .wp-block-navigation-item__label {
 	color: #000 !important;
 }
 
