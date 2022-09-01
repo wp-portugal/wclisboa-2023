@@ -51,3 +51,39 @@ main > div:first-child > hr,
 main > div:first-child + div.wp-block-spacer {
 	display: none;
 }
+
+/* Hide featured images on pages. only used for Open Graph */
+.page-slug-contacto .wp-block-post-featured-image {
+	display: none;
+}
+
+/* Conteúdo máximo 1200px */
+.entry-content > .alignwide,
+.entry-content > .alignleft,
+.entry-content > .alignright,
+.wp-block-group .alignwide {
+	max-width: 1200px;
+}
+.wp-block-group > :not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide),
+.wp-block-group .alignwide {
+	/* Porque está comentado? */
+/*
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	*/
+}
+.entry-content > :not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+	max-width: 900px;
+}
+
+/* Newsletter */
+.jetpack_subscription_widget .success {
+	background-color: #d1ffd2;
+	padding: .1em 1em;
+}
+.jetpack_subscription_widget .error {
+	background-color: #ffd1d1;
+	padding: .1em 1em;
+}
+
