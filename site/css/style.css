@@ -10,6 +10,12 @@ p.small {
 	margin-block-end: 0.3em;
 }
 
+/* Corrigir cores do menu nas páginas de notícias */
+.wclx23header a,
+.wclx23header a .wp-block-navigation-item__label {
+	color: #000 !important;
+}
+
 /* Botões do formulário. */
 .wp-block-button__link {
 	border-radius: 3px;
