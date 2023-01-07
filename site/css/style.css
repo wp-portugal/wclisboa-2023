@@ -8,6 +8,10 @@
 
 /* Main */
 body {
+	--wp--preset--font-family--system-font: Mulish, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--wp--preset--font-family--source-serif-pro: Montserrat, Mulish, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+body {
 	overflow-x: hidden; /* Because of 100% heros */
 }
 header {
@@ -56,11 +60,11 @@ p.small {
 	padding: 1em;
 }
 
-/* Links in new window - To be tested */
-/*a[target="_blank"]::after {
+/* Links in new window - Not working */
+a[target="_blank"]::after {
 	content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
 	margin: 0 3px 0 5px;
-}*/
+}
 
 /* Buttons */
 .wp-block-button__link {
@@ -163,7 +167,7 @@ main > div:first-child + div.wp-block-spacer {
 .wordcamp-sponsors li a {
 	display: block;
 	box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.1);
-	  transition: box-shadow 0.3s ease-in-out;
+	transition: box-shadow 0.3s ease-in-out;
 }
 .wordcamp-sponsors li a:hover {
 	box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
