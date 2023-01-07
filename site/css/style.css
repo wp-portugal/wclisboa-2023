@@ -1,28 +1,68 @@
+/**
+ * WordCamp Lisboa 2023 website CSS file 
+ * 
+ * This file is not to be used as remote because "!important" and "content" will not work.
+ * Stored on GitHub but should be copied to Additional CSS on the website each time it's updated
+ * 
+**/
+
+/* Main */
+body {
+	overflow-x: hidden; /* Because of 100% heros */
+}
+header {
+	margin-top: 1em !important;
+}
+
+/* Conteúdo máximo 1200px */
+.entry-content > .alignwide,
+.entry-content > .alignleft,
+.entry-content > .alignright,
+.wp-block-group .alignwide {
+	max-width: 1200px;
+}
+.wp-block-group > :not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide),
+.wp-block-group .alignwide {
+	/* Porque está comentado? */
+/*
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	*/
+}
+.entry-content > :not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+	max-width: 900px; /* Why? */
+}
+
 /* Utils */
 .hide {
 	display: none;
 }
-
-/* small */
 p.small {
 	font-size: 0.8em;
 	margin-block-start: 0.3em;
 	margin-block-end: 0.3em;
 }
+.hero100 {
+	width: 100vw;
+	left: calc(-50vw + 50%);
+	postion: relative;
+	max-width: 100vw !important;
+}
+.hero100home .wp-block-cover__inner-container { /* Should be mobile first */
+	max-width: 900px;
+	width: 50%;
+	margin-left: 50%;
+	padding: 1em;
+}
 
-/* Links em nova janela - Não funciona o content */
+/* Links in new window - To be tested */
 /*a[target="_blank"]::after {
 	content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
 	margin: 0 3px 0 5px;
 }*/
 
-/* Corrigir cores do menu nas páginas de notícias */
-.wclx23header nav a,
-.wclx23header nav a .wp-block-navigation-item__label {
-	color: #000 !important;
-}
-
-/* Botões do formulário. */
+/* Buttons */
 .wp-block-button__link {
 	border-radius: 3px;
 	white-space: nowrap;
@@ -31,30 +71,20 @@ p.small {
 	cursor: pointer;
 }
 
-/* Organizadores */
-.wordcamp-organizers li:not(:last-child) {
-	border-bottom: 1px solid #cccccc;
-	padding-bottom: 2em;
+/* Newsletter */
+.jetpack_subscription_widget .success {
+	background-color: #d1ffd2;
+	padding: .1em 1em;
 }
-.wordcamp-image__avatar-container img {
-    border-radius: 50%;
+.jetpack_subscription_widget .error {
+	background-color: #ffd1d1;
+	padding: .1em 1em;
 }
-@media only screen and (min-width: 600px) {
-	.wordcamp-image__avatar-container {
-    	float: left;
-    	margin-right: 1em;
-	}
-	.wordcamp-image__avatar-container img {
-		width: 100px;
-		height: 100px;
-	}
-}
-.wordcamp-organizers__title {
-	font-weight: 600;
-}
-.wordcamp-organizers__content h3 {
-	font-weight: 400;
-	font-size: 1.5em;
+
+/* Fix menu colours on news pages */
+.wclx23header nav a,
+.wclx23header nav a .wp-block-navigation-item__label {
+	color: #000 !important;
 }
 
 /* Fix featured images - Remove extra space and separator */
@@ -77,33 +107,96 @@ main > div:first-child + div.wp-block-spacer {
 	display: none;
 }
 
-/* Conteúdo máximo 1200px */
-.entry-content > .alignwide,
-.entry-content > .alignleft,
-.entry-content > .alignright,
-.wp-block-group .alignwide {
-	max-width: 1200px;
+/* Organizers */
+.wordcamp-organizers li:not(:last-child) {
+	border-bottom: 1px solid #cccccc;
+	padding-bottom: 2em;
 }
-.wp-block-group > :not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide),
-.wp-block-group .alignwide {
-	/* Porque está comentado? */
-/*
-	max-width: 1200px;
-	margin-left: auto;
-	margin-right: auto;
-	*/
+.wordcamp-image__avatar-container img {
+	border-radius: 50%;
 }
-.entry-content > :not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-	max-width: 900px;
+@media only screen and (min-width: 600px) {
+	.wordcamp-image__avatar-container {
+		float: left;
+		margin-right: 1em;
+	}
+	.wordcamp-image__avatar-container img {
+		width: 100px;
+		height: 100px;
+	}
+}
+.wordcamp-organizers__title {
+	font-weight: 600;
+}
+.wordcamp-organizers__content h3 {
+	font-weight: 400;
+	font-size: 1.5em;
+}
+.wordcamp-organizers .wp-block-social-links li {
+	border-bottom: unset;
+	padding-bottom: unset;
+}
+.wordcamp-organizers .wordcamp-organizer .organizer-meta {
+	height: 100px;
+	align-content: center;
+	display: grid;
 }
 
-/* Newsletter */
-.jetpack_subscription_widget .success {
-	background-color: #d1ffd2;
-	padding: .1em 1em;
+/* Sponsors */
+.sponsors-container {
+	background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 80%, rgba(0,0,0,0.05) 100%)
 }
-.jetpack_subscription_widget .error {
-	background-color: #ffd1d1;
-	padding: .1em 1em;
+.wordcamp-sponsors {
+	text-align: center;
+	margin: 1em 0 !important; /* Reset */
+	padding: 0 !important; /* Reset */
+	padding-inline-start: 0; /* Reset */
 }
-
+.wordcamp-sponsors li {
+	display: inline-block;
+	max-width: 30% !important; /* 3 per line */
+	margin: 0 !important; /* Reset */
+	margin-left: 1.25% !important; /* 12.5px */
+	margin-right: 1.25% !important; /* 12.5px */
+	margin-bottom: 1.25% !important; /* 12.5px */
+}
+.wordcamp-sponsors li a {
+	display: block;
+	box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.1);
+	  transition: box-shadow 0.3s ease-in-out;
+}
+.wordcamp-sponsors li a:hover {
+	box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+}
+.wordcamp-sponsors li img {
+	height: auto !important;
+	display: block;
+}
+.wordcamp-sponsors.sponsors-community li,
+.wordcamp-sponsors.sponsors-diamante li {
+	max-width: 30% !important; /* 3 per line */
+}
+.wordcamp-sponsors.sponsors-ouro li {
+	max-width: 22% !important; /* 4 per line */
+}
+.wordcamp-sponsors.sponsors-prata li {
+	max-width: 17.1% !important; /* 5 per line */
+}
+.wordcamp-sponsors.sponsors-bronze li {
+	max-width: 13.8% !important; /* 6 per line */
+}
+@media only screen and (max-width: 599px) { /* We're going desktop first here - Maybe change this to a higher resolution */
+	.wordcamp-sponsors.sponsors-community li,
+	.wordcamp-sponsors.sponsors-diamante li {
+		max-width: 46.5% !important; /* 2 per line */
+	}
+	.wordcamp-sponsors.sponsors-ouro li {
+		max-width: 46.5% !important; /* 2 per line as they are 4 makes no sense to have 3 per line */
+	}
+	.wordcamp-sponsors.sponsors-prata li {
+		max-width: 30% !important; /* 3 per line */
+	}
+	.wordcamp-sponsors.sponsors-bronze li {
+		max-width: 30% !important; /* 3 per line as 4 is just too small */
+	}
+}
