@@ -238,6 +238,28 @@ a[target="_blank"]::after {
 	font-weight: bold;
 }
 
+/* Improve Nav Menu design */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content,
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation-item,
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container {
+	align-items: flex-start !important;
+}
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .has-child .wp-block-navigation__submenu-container {
+	padding-left: 1em !important;
+	padding-top: 0 !important;
+}
+.wclx23header nav ul.wp-block-navigation__submenu-container,
+.wclx23header nav ul.wp-block-navigation__submenu-container li a {
+	font-weight: normal !important;
+}
+.wclx23header nav .is-menu-open ul > li a  {
+	text-transform: uppercase;
+}
+.wclx23header nav  ul.wp-block-navigation__submenu-container > li > a,
+.wclx23header nav  ul.wp-block-navigation__submenu-container > li > a .wp-block-navigation-item__label {
+	text-transform: none;
+	font-weight: normal;
+}
 /* Fix featured images - Remove extra space and separator */
 main > div:first-child > hr,
 main > div:first-child + div.wp-block-spacer {
