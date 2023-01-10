@@ -629,7 +629,7 @@ body footer {
 }
 
 .wclx23-footer-blue .jetpack_subscription_widget .wp-block-button__link {
-    background-color: #FAAF32;
+    background-color: #FAAF32 !important;
 }
 
 .wclx23-footer-blue .jetpack_subscription_widget {
