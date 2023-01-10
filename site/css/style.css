@@ -299,25 +299,31 @@ a[target="_blank"]::after {
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container {
     align-items: flex-start !important;
 }
-
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .has-child .wp-block-navigation__submenu-container {
     padding-left: 1em !important;
     padding-top: 0 !important;
 }
-
 .wclx23header nav ul.wp-block-navigation__submenu-container,
 .wclx23header nav ul.wp-block-navigation__submenu-container li a {
     font-weight: normal !important;
 }
-
 .wclx23header nav .is-menu-open ul > li a {
     text-transform: uppercase;
 }
-
 .wclx23header nav  ul.wp-block-navigation__submenu-container > li > a,
 .wclx23header nav  ul.wp-block-navigation__submenu-container > li > a .wp-block-navigation-item__label {
     text-transform: none;
     font-weight: normal;
+}
+.wclx23header nav .tickets-link-pt {
+    background-color: #FAAF32;
+    padding: 0.25em 0.75em;
+}
+.wclx23header nav .tickets-link-en {
+    background-color: #FAAF32;
+}
+.wclx23header nav ul.wp-block-navigation__submenu-container li.tickets-link-en a .wp-block-navigation-item__label {
+    font-weight: bold;
 }
 
 /* Fix featured images - Remove extra space and separator */
