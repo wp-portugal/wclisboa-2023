@@ -241,6 +241,13 @@ p.small {
     content: 'PT';
 }
 
+.hero100-wp20 .wp-block-image.aligncenter {
+    display: block;
+}
+.hero100-wp20 .wp-block-button .wp-block-button__link {
+    background-color: #FFFFFF !important;
+}
+
 /* Links in new window - Not working */
 a[target="_blank"]::after {
     content: "\f504";
@@ -605,9 +612,15 @@ body.archive ul.wp-block-post-template a {
 
 
 /* Footer */
+body.home main .wp-block-group:last-child { /* Fix empty group the comes from nowehere */
+    margin-block-start: 0;
+}
 body footer {
     margin-block-start: 0;
     clear: both;
+}
+body.home footer { /* Because of 20th aniversary block */
+    margin-top: 0px;
 }
 
 .wclx23-footer-blue .wp-block-column p {
