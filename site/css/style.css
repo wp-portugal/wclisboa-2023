@@ -504,7 +504,7 @@ footer .sponsors-container-home .microsponsors-footer {
 /* Blog */
 @media only screen and (min-width: 782px) {
     body.blog ul.wp-block-post-template,
-            body.archive ul.wp-block-post-template {
+    body.archive ul.wp-block-post-template {
         overflow: hidden;
     }
     
@@ -578,8 +578,39 @@ body.archive ul.wp-block-post-template a {
 .tix-submit {
     margin-bottom: 3em;
 }
+.tix-attendee-form td.tix-left,
+.tix-attendee-form td.tix-right {
+    width: 50%;
+}
+.tix-attendee-form td.tix-left {
+ font-weight: 600;
+}
+.tix-attendee-form input[type="text"],
+.tix-attendee-form input[type="email"],
+.tix-attendee-form input[type="url"],
+.tix-attendee-form textarea,
+.tix-attendee-form select {
+    width: 100%;
+}
+@media only screen and (max-width: 781px) {
+    .tix-attendee-form,
+    .tix-attendee-form tr,
+    .tix-attendee-form td {
+        display: block;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+}
+
+.tix-row-covid-waiver {
+    font-size: 0.7em;
+}
+.tix-attendee-form .tix-row-covid-waiver td.tix-left {
+    font-weight: 400;
+}
 .tix-row-covid-waiver label {
     font-weight: bold;
+    font-size: 1.3em;
 }
 #tix-attendees li {
     height: 96px;
