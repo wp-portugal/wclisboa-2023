@@ -618,7 +618,9 @@ body.archive ul.wp-block-post-template a {
 }
 
 .tix-submit {
+    box-sizing: border-box;
     margin-bottom: 3em;
+    padding: 0.5em 1em
 }
 
 .tix-attendee-form td.tix-left,
@@ -634,14 +636,22 @@ body.archive ul.wp-block-post-template a {
 .tix-attendee-form input[type="email"],
 .tix-attendee-form input[type="url"],
 .tix-attendee-form textarea,
-.tix-attendee-form select {
+.tix-attendee-form select,
+.camptix-invoice-details input[type="text"],
+.camptix-invoice-details select,
+.camptix-invoice-details textarea {
     width: 100%;
+    box-sizing: border-box;
+}
+.tix-attendee-form textarea,
+.camptix-invoice-details textarea {
+    height: 4em;
 }
 
 @media only screen and (max-width: 781px) {
     .tix-attendee-form,
-            .tix-attendee-form tr,
-            .tix-attendee-form td {
+    .tix-attendee-form tr,
+    .tix-attendee-form td {
         display: block;
         width: 100% !important;
         box-sizing: border-box;
@@ -704,6 +714,16 @@ body.archive ul.wp-block-post-template a {
 .tix-payment-method-container fieldset {
     border: 0;
     border-bottom: 2px solid #0073B4;
+}
+
+.camptix-invoice-toggle-wrapper {
+    box-sizing: border-box;
+    padding: 0.5em 1em
+    width: 100%;
+    margin-bottom: 2em;
+}
+.camptix-invoice-toggle-wrapper label[for="camptix-need-invoice"] {
+    font-weight: bold;
 }
 
 @media only screen and (max-width: 1099px) {
