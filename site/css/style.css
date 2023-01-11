@@ -450,6 +450,10 @@ body.page .wp-block-post-featured-image {
 /* 6 per line */
 }
 
+footer .sponsors-container-home .microsponsors-footer {
+    display: none;
+}
+
 @media only screen and (max-width: 781px) {
     /* We're going desktop first here - Maybe change this to a higher resolution? */
     .wordcamp-sponsors.sponsors-community li,
