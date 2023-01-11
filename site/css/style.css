@@ -638,6 +638,24 @@ body.archive ul.wp-block-post-template a {
     margin-left: 1%;
     margin-right: 1%;
 }
+.tix-payment-method .tix-payment-tab.tix-tab-selected {
+    background-color: #eff6fb;
+    color: #0073B4;
+    border-bottom-color: #0073B4;
+}
+.tix-payment-method .tix-payment-tab {
+    color: #0073B4;
+    background-color: white;
+    border-bottom-color: #0073B4;
+}
+.tix-payment-method-container {
+    background-color: #eff6fb;
+}
+.tix-payment-method-container fieldset {
+    border: 0;
+    border-bottom: 2px solid #0073B4;
+
+}
 @media only screen and (max-width: 1099px) {
     #tix-attendees .tix-columns-4 li {
         width: 31.333333%;
