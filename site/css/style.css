@@ -482,6 +482,7 @@ body.page .wp-block-post-featured-image {
 }
 
 .wordcamp-sponsors.sponsors-community li,
+.wordcamp-sponsors.sponsors-afterparty li,
 .wordcamp-sponsors.sponsors-diamante li {
     max-width: 30% !important;
 /* 3 per line */
@@ -509,7 +510,8 @@ footer .sponsors-container-home .microsponsors-footer {
 @media only screen and (max-width: 781px) {
     /* We're going desktop first here - Maybe change this to a higher resolution? */
     .wordcamp-sponsors.sponsors-community li,
-                    .wordcamp-sponsors.sponsors-diamante li {
+    .wordcamp-sponsors.sponsors-afterparty li,
+    .wordcamp-sponsors.sponsors-diamante li {
         max-width: 46.5% !important;
     /* 2 per line */
     }
@@ -531,6 +533,18 @@ footer .sponsors-container-home .microsponsors-footer {
 }
 
 .page-slug-patrocinadores-sponsors .sponsors-container-home {
+    display: none;
+}
+
+body.single-wcb_sponsor h1.wp-block-post-title {
+    display: none;
+}
+body.single-wcb_sponsor .wp-block-post-featured-image img {
+    max-width: 600px;
+    margin: auto;
+    display: block;
+}
+body.single-wcb_sponsor main .wp-block-group.is-layout-constrained:last-child {
     display: none;
 }
 
