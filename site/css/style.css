@@ -33,7 +33,7 @@ h1.wp-block-query-title {
 
 @media only screen and (max-width: 781px) {
     h1.wp-block-post-title,
-            h1.wp-block-query-title {
+                    h1.wp-block-query-title {
         font-size: clamp(2rem, 6vw, 3.25rem);
     /* Avoid title wrapping in mobile by changing fist clamp value */
     }
@@ -41,7 +41,7 @@ h1.wp-block-query-title {
 
 @media only screen and (max-width: 389px) {
     h1.wp-block-post-title,
-            h1.wp-block-query-title {
+                    h1.wp-block-query-title {
         font-size: clamp(1.6rem, 6vw, 3.25rem);
     /* Avoid title wrapping in mobile by changing fist clamp value */
     }
@@ -223,6 +223,7 @@ p.small {
 .home-after-cta {
     margin-block-start: 0 !important;
 }
+
 @media only screen and (max-width: 781px) {
     .home-cta p,
     .home-cta .wp-block-buttons {
@@ -232,39 +233,60 @@ p.small {
 }
 
 .home-cta {
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    line-height: 1.2em;
 }
+
 .home-cta a {
     display: block;
     text-align: center;
     text-decoration: none;
-    color: #0073B4;
-    padding: 1em;
+    color: #005280;
+    padding: 0.5em;
     font-weight: bold;
 }
+
 .home-cta a:hover {
     display: block;
     background-color: #FAAF32;
     color: #FFFFFF;
 }
+
 .home-cta span.dashicons {
     display: block;
     margin: auto;
-    font-size: 6em;
+    font-size: 5em;
     height: 1em;
     width: 1em;
+    margin-bottom: 0.1em;
 }
+
 .home-cta em {
     display: block;
     font-weight: normal;
+    font-size: 0.8em;
+    line-height: 1.2em;
+    padding-top: 0.15em;
 }
+
 @media only screen and (max-width: 781px) {
-    .home-cta .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column {
-        flex-basis: 40% !important; /* Have no idea why this works and 50% does not */
+    .home-cta .wp-block-columns>.wp-block-column {
+        flex-basis: 45% !important;
+    /* Have no idea why this works and 50% does not */
         flex-grow: 1;
     }
-}
+    .home-cta span.dashicons {
+        font-size: 4.5em;
+    }
+    .home-cta {
+        font-size: 0.9em;
+    }
+    .home-cta em {
+        font-size: 0.9em;
+    }
 
 .home-blogposts h2.wp-block-post-title {
     line-height: 1.6;
@@ -287,7 +309,7 @@ p.small {
     line-height: .5;
     padding: .5em;
     font-weight: bold;
-    font-size: 0.75em;
+    font-size: .75em;
 }
 
 .home-blogposts li.tag-english-blog::after {
@@ -545,8 +567,8 @@ footer .sponsors-container-home .microsponsors-footer {
 @media only screen and (max-width: 781px) {
     /* We're going desktop first here - Maybe change this to a higher resolution? */
     .wordcamp-sponsors.sponsors-community li,
-    .wordcamp-sponsors.sponsors-afterparty li,
-    .wordcamp-sponsors.sponsors-diamante li {
+            .wordcamp-sponsors.sponsors-afterparty li,
+            .wordcamp-sponsors.sponsors-diamante li {
         max-width: 46.5% !important;
     /* 2 per line */
     }
@@ -579,6 +601,7 @@ body.single-wcb_sponsor .wp-block-post-featured-image img {
     margin: auto;
     display: block;
 }
+
 body.single-wcb_sponsor main .wp-block-group.is-layout-constrained:last-child {
     display: none;
 }
@@ -586,19 +609,19 @@ body.single-wcb_sponsor main .wp-block-group.is-layout-constrained:last-child {
 /* Blog */
 @media only screen and (min-width: 782px) {
     body.blog ul.wp-block-post-template,
-            body.archive ul.wp-block-post-template {
+                    body.archive ul.wp-block-post-template {
         overflow: hidden;
     }
     
     body.blog ul.wp-block-post-template li,
-                    body.archive ul.wp-block-post-template li {
+                            body.archive ul.wp-block-post-template li {
         width: 48%;
         float: left;
         margin: 0 1%;
     }
     
     body.blog ul.wp-block-post-template li:nth-child(odd),
-                    body.archive ul.wp-block-post-template li:nth-child(odd) {
+                            body.archive ul.wp-block-post-template li:nth-child(odd) {
         clear: both;
     }
 }
@@ -670,7 +693,7 @@ body.archive ul.wp-block-post-template a {
 .tix-submit {
     box-sizing: border-box;
     margin-bottom: 3em;
-    padding: 0.5em 1em
+    padding: .5em 1em;
 }
 
 .tix-attendee-form td.tix-left,
@@ -693,6 +716,7 @@ body.archive ul.wp-block-post-template a {
     width: 100%;
     box-sizing: border-box;
 }
+
 .tix-attendee-form textarea,
 .camptix-invoice-details textarea {
     height: 4em;
@@ -700,8 +724,8 @@ body.archive ul.wp-block-post-template a {
 
 @media only screen and (max-width: 781px) {
     .tix-attendee-form,
-    .tix-attendee-form tr,
-    .tix-attendee-form td {
+            .tix-attendee-form tr,
+            .tix-attendee-form td {
         display: block;
         width: 100% !important;
         box-sizing: border-box;
@@ -768,10 +792,11 @@ body.archive ul.wp-block-post-template a {
 
 .camptix-invoice-toggle-wrapper {
     box-sizing: border-box;
-    padding: 0.5em 1em
+    padding: .5em 1em;
     width: 100%;
     margin-bottom: 2em;
 }
+
 .camptix-invoice-toggle-wrapper label[for="camptix-need-invoice"] {
     font-weight: bold;
 }
