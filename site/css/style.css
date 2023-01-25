@@ -536,9 +536,9 @@ footer .sponsors-container-home .microsponsors-footer {
     display: none;
 }
 
-body.single-wcb_sponsor h1.wp-block-post-title {
+/*body.single-wcb_sponsor h1.wp-block-post-title {
     display: none;
-}
+}*/
 body.single-wcb_sponsor .wp-block-post-featured-image img {
     max-width: 600px;
     margin: auto;
