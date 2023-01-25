@@ -219,15 +219,50 @@ p.small {
     }
 }
 
-.home-cta {
+.home-cta,
+.home-after-cta {
     margin-block-start: 0 !important;
 }
-
 @media only screen and (max-width: 781px) {
     .home-cta p,
-                    .home-cta .wp-block-buttons {
+    .home-cta .wp-block-buttons {
         text-align: center !important;
         justify-content: center !important;
+    }
+}
+
+.home-cta {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+.home-cta a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #0073B4;
+    padding: 1em;
+    font-weight: bold;
+}
+.home-cta a:hover {
+    display: block;
+    background-color: #FAAF32;
+    color: #FFFFFF;
+}
+.home-cta span.dashicons {
+    display: block;
+    margin: auto;
+    font-size: 6em;
+    height: 1em;
+    width: 1em;
+}
+.home-cta em {
+    display: block;
+    font-weight: normal;
+}
+@media only screen and (max-width: 781px) {
+    .home-cta .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column {
+        flex-basis: 40% !important; /* Have no idea why this works and 50% does not */
+        flex-grow: 1;
     }
 }
 
