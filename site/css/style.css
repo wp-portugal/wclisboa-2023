@@ -226,7 +226,7 @@ p.small {
 
 @media only screen and (max-width: 781px) {
     .home-cta p,
-    .home-cta .wp-block-buttons {
+            .home-cta .wp-block-buttons {
         text-align: center !important;
         justify-content: center !important;
     }
@@ -245,10 +245,12 @@ p.small {
     text-align: center;
     text-decoration: none;
     color: #005280;
-    padding: 0.5em;
+    padding: .5em;
     font-weight: bold;
+    transition-property: color, background-color !important;
+    transition-duration: .1s !important;
+    transition-timing-function: ease-in !important;
 }
-
 .home-cta a:hover {
     display: block;
     background-color: #FAAF32;
@@ -258,18 +260,19 @@ p.small {
 .home-cta span.dashicons {
     display: block;
     margin: auto;
-    font-size: 5em;
+    font-size: 4.5em;
     height: 1em;
     width: 1em;
-    margin-bottom: 0.1em;
+    margin-bottom: .15em;
+    transition: none;
 }
 
 .home-cta em {
     display: block;
     font-weight: normal;
-    font-size: 0.8em;
+    font-size: .8em;
     line-height: 1.2em;
-    padding-top: 0.15em;
+    padding-top: .15em;
 }
 
 @media only screen and (max-width: 781px) {
@@ -278,15 +281,19 @@ p.small {
     /* Have no idea why this works and 50% does not */
         flex-grow: 1;
     }
+    
     .home-cta span.dashicons {
         font-size: 4.5em;
     }
+    
     .home-cta {
-        font-size: 0.9em;
+        font-size: .9em;
     }
+    
     .home-cta em {
-        font-size: 0.9em;
+        font-size: .9em;
     }
+}
 
 .home-blogposts h2.wp-block-post-title {
     line-height: 1.6;
