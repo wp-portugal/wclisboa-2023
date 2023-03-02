@@ -120,6 +120,17 @@ h2 img.emoji {
     font-size: 1.75em;
 }
 
+.rainbow-text {
+    /* background-image: linear-gradient(to left, indigo, blue, green, yellow, orange, red); */
+    background-image: linear-gradient(to left, indigo, blue, green, #FFDB58, orange, red); /* Not exactly yellow but has a better reading */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.contact-form label.radio span {
+    opacity: 1;
+}
+
 /* Conteúdo máximo 1100px */
 .entry-content > .alignwide,
 .entry-content > .alignleft,
