@@ -131,18 +131,18 @@ h2 img.emoji {
 
 /* Utils */
 .hide {
-    display: none;
+    display: none !important;
 }
 
 @media only screen and (max-width: 781px) {
     .hide-mobile {
-        display: none;
+        display: none !important;
     }
 }
 
 @media only screen and (min-width: 782px) {
     .hide-desktop {
-        display: none;
+        display: none !important;
     }
 }
 
@@ -503,6 +503,10 @@ body.page .wp-block-post-featured-image {
     height: 100px;
     align-content: center;
     display: grid;
+}
+
+.wordcamp-organizer .wp-block-columns {
+    clear: both;
 }
 
 /* Sponsors */
