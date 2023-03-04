@@ -127,7 +127,9 @@ h2 img.emoji {
     color: transparent;
 }
 
-.contact-form label.radio span {
+.contact-form label.radio span,
+.contact-form label.checkbox span,
+.contact-form label.checkbox-multiple span {
     opacity: 1;
 }
 
