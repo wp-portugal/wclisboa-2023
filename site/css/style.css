@@ -572,7 +572,8 @@ body.page .wp-block-post-featured-image {
 /* 3 per line */
 }
 
-.wordcamp-sponsors.sponsors-ouro li {
+.wordcamp-sponsors.sponsors-ouro li,
+.wordcamp-sponsors.sponsors-media-partner li {
     max-width: 22% !important;
 /* 4 per line */
 }
@@ -600,7 +601,8 @@ footer .sponsors-container-home .microsponsors-footer {
     /* 2 per line */
     }
     
-    .wordcamp-sponsors.sponsors-ouro li {
+    .wordcamp-sponsors.sponsors-ouro li,
+    .wordcamp-sponsors.sponsors-media-partner li {
         max-width: 46.5% !important;
     /* 2 per line as they are 4 makes no sense to have 3 per line */
     }
