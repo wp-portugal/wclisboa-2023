@@ -33,7 +33,7 @@ h1.wp-block-query-title {
 
 @media only screen and (max-width: 781px) {
     h1.wp-block-post-title,
-                                    h1.wp-block-query-title {
+                                            h1.wp-block-query-title {
         font-size: clamp(2rem, 6vw, 3.25rem);
     /* Avoid title wrapping in mobile by changing fist clamp value */
     }
@@ -41,7 +41,7 @@ h1.wp-block-query-title {
 
 @media only screen and (max-width: 389px) {
     h1.wp-block-post-title,
-                                    h1.wp-block-query-title {
+                                            h1.wp-block-query-title {
         font-size: clamp(1.6rem, 6vw, 3.25rem);
     /* Avoid title wrapping in mobile by changing fist clamp value */
     }
@@ -121,8 +121,9 @@ h2 img.emoji {
 }
 
 .rainbow-text {
-    /* background-image: linear-gradient(to left, indigo, blue, green, yellow, orange, red); */
-    background-image: linear-gradient(to left, indigo, blue, green, #FFDB58, orange, red); /* Not exactly yellow but has a better reading */
+/* background-image: linear-gradient(to left, indigo, blue, green, yellow, orange, red); */
+    background-image: linear-gradient(to left, indigo, blue, green, #FFDB58, orange, red);
+/* Not exactly yellow but has a better reading */
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -239,7 +240,7 @@ p.small {
 
 @media only screen and (max-width: 781px) {
     .home-cta p,
-                            .home-cta .wp-block-buttons {
+                                    .home-cta .wp-block-buttons {
         text-align: center !important;
         justify-content: center !important;
     }
@@ -316,10 +317,12 @@ p.small {
 .home-blogposts li {
     position: relative;
 }
+
 .home-blogposts li figure,
 .home-blogposts li figure a {
     height: auto !important;
 }
+
 .home-blogposts li:nth-of-type(1n+7) {
     display: none;
 }
@@ -335,6 +338,7 @@ p.small {
     font-weight: bold;
     font-size: .75em;
 }
+
 .home-blogposts li.tag-english-blog::after {
     content: 'EN';
 }
@@ -595,14 +599,14 @@ footer .sponsors-container-home .microsponsors-footer {
 @media only screen and (max-width: 781px) {
     /* We're going desktop first here - Maybe change this to a higher resolution? */
     .wordcamp-sponsors.sponsors-community li,
-                            .wordcamp-sponsors.sponsors-afterparty li,
-                            .wordcamp-sponsors.sponsors-diamante li {
+                                    .wordcamp-sponsors.sponsors-afterparty li,
+                                    .wordcamp-sponsors.sponsors-diamante li {
         max-width: 46.5% !important;
     /* 2 per line */
     }
     
     .wordcamp-sponsors.sponsors-ouro li,
-    .wordcamp-sponsors.sponsors-media-partner li {
+            .wordcamp-sponsors.sponsors-media-partner li {
         max-width: 46.5% !important;
     /* 2 per line as they are 4 makes no sense to have 3 per line */
     }
@@ -638,19 +642,19 @@ body.single-wcb_sponsor main .wp-block-group.is-layout-constrained:last-child {
 /* Blog */
 @media only screen and (min-width: 782px) {
     body.blog ul.wp-block-post-template,
-                                    body.archive ul.wp-block-post-template {
+                                            body.archive ul.wp-block-post-template {
         overflow: hidden;
     }
     
     body.blog ul.wp-block-post-template li,
-                                            body.archive ul.wp-block-post-template li {
+                                                    body.archive ul.wp-block-post-template li {
         width: 48%;
         float: left;
         margin: 0 1%;
     }
     
     body.blog ul.wp-block-post-template li:nth-child(odd),
-                                            body.archive ul.wp-block-post-template li:nth-child(odd) {
+                                                    body.archive ul.wp-block-post-template li:nth-child(odd) {
         clear: both;
     }
 }
@@ -753,8 +757,8 @@ body.archive ul.wp-block-post-template a {
 
 @media only screen and (max-width: 781px) {
     .tix-attendee-form,
-                            .tix-attendee-form tr,
-                            .tix-attendee-form td {
+                                    .tix-attendee-form tr,
+                                    .tix-attendee-form td {
         display: block;
         width: 100% !important;
         box-sizing: border-box;
@@ -869,6 +873,63 @@ body.archive ul.wp-block-post-template a {
     /*margin-left: 0 !important;*/
     }
 }
+
+/* Schedule - Desktop */
+@media only screen and (min-width: 550px) {
+}
+
+/* Schedule - Languages */
+.wordcamp-schedule__session .wordcamp-schedule__session-speakers::before {
+    margin-right: 0.25em;
+    background-color: #ccc;
+}
+.wordcamp-schedule__session.has-category-portugues .wordcamp-schedule__session-speakers::before {
+    content: "(POR)";
+}
+.wordcamp-schedule__session.has-category-english .wordcamp-schedule__session-speakers::before {
+    content: "(ENG)";
+}
+
+/* Schedule - Duration */
+h4.wordcamp-schedule__session-title {
+    display: block;
+    padding-right: 1.5em;
+}
+.wordcamp-schedule__session .wcb-session-favourite-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.wordcamp-schedule__session .wordcamp-schedule__session-title::after {
+    display: block;
+    background-color: #ccc;
+    font-weight: normal;
+}
+.wordcamp-schedule__session.has-category-30min .wordcamp-schedule__session-title::after {
+    content: "30min";
+}
+.wordcamp-schedule__session.has-category-120min-6060 .wordcamp-schedule__session-title::after {
+    content: "12min (60+60)";
+}
+
+/* Schedule - Topics (all combinations...... order alphabetically inside each combination) */
+.wordcamp-schedule__session:after {
+    display: block;
+    background-color: #ccc;
+}
+.wordcamp-schedule__session.has-category-block-editor.has-category-development::after {
+    content: "Block-editor / Development";
+}
+.wordcamp-schedule__session.has-category-administration.has-category-development.has-category-security::after {
+    content: "Administration / Development / Security";
+}
+
+/* Schedule - To be removed */
+h4.wordcamp-schedule__session-title + p,
+.wordcamp-schedule__session-category {
+    color: red;
+}
+
 
 /* Footer */
 body.home main .wp-block-group:last-child {
