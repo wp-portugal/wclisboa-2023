@@ -33,7 +33,7 @@ h1.wp-block-query-title {
 
 @media only screen and (max-width: 781px) {
     h1.wp-block-post-title,
-                                                    h1.wp-block-query-title {
+                                                            h1.wp-block-query-title {
         font-size: clamp(2rem, 6vw, 3.25rem);
     /* Avoid title wrapping in mobile by changing fist clamp value */
     }
@@ -41,7 +41,7 @@ h1.wp-block-query-title {
 
 @media only screen and (max-width: 389px) {
     h1.wp-block-post-title,
-                                                    h1.wp-block-query-title {
+                                                            h1.wp-block-query-title {
         font-size: clamp(1.6rem, 6vw, 3.25rem);
     /* Avoid title wrapping in mobile by changing fist clamp value */
     }
@@ -240,7 +240,7 @@ p.small {
 
 @media only screen and (max-width: 781px) {
     .home-cta p,
-                                            .home-cta .wp-block-buttons {
+                                                    .home-cta .wp-block-buttons {
         text-align: center !important;
         justify-content: center !important;
     }
@@ -599,14 +599,14 @@ footer .sponsors-container-home .microsponsors-footer {
 @media only screen and (max-width: 781px) {
     /* We're going desktop first here - Maybe change this to a higher resolution? */
     .wordcamp-sponsors.sponsors-community li,
-                                            .wordcamp-sponsors.sponsors-afterparty li,
-                                            .wordcamp-sponsors.sponsors-diamante li {
+                                                    .wordcamp-sponsors.sponsors-afterparty li,
+                                                    .wordcamp-sponsors.sponsors-diamante li {
         max-width: 46.5% !important;
     /* 2 per line */
     }
     
     .wordcamp-sponsors.sponsors-ouro li,
-                    .wordcamp-sponsors.sponsors-media-partner li {
+                            .wordcamp-sponsors.sponsors-media-partner li {
         max-width: 46.5% !important;
     /* 2 per line as they are 4 makes no sense to have 3 per line */
     }
@@ -642,19 +642,19 @@ body.single-wcb_sponsor main .wp-block-group.is-layout-constrained:last-child {
 /* Blog */
 @media only screen and (min-width: 782px) {
     body.blog ul.wp-block-post-template,
-                                                    body.archive ul.wp-block-post-template {
+                                                            body.archive ul.wp-block-post-template {
         overflow: hidden;
     }
     
     body.blog ul.wp-block-post-template li,
-                                                            body.archive ul.wp-block-post-template li {
+                                                                    body.archive ul.wp-block-post-template li {
         width: 48%;
         float: left;
         margin: 0 1%;
     }
     
     body.blog ul.wp-block-post-template li:nth-child(odd),
-                                                            body.archive ul.wp-block-post-template li:nth-child(odd) {
+                                                                    body.archive ul.wp-block-post-template li:nth-child(odd) {
         clear: both;
     }
 }
@@ -757,8 +757,8 @@ body.archive ul.wp-block-post-template a {
 
 @media only screen and (max-width: 781px) {
     .tix-attendee-form,
-                                            .tix-attendee-form tr,
-                                            .tix-attendee-form td {
+                                                    .tix-attendee-form tr,
+                                                    .tix-attendee-form td {
         display: block;
         width: 100% !important;
         box-sizing: border-box;
@@ -880,6 +880,21 @@ body.archive ul.wp-block-post-template a {
     display: none;
 }
 
+/* Schedule - Non talks */
+.wordcamp-schedule__session.is-type-custom {
+    background-color: #DDD;
+    font-size: 70%;
+}
+.wordcamp-schedule__session.is-type-custom H4 {
+    font-weight: normal;
+}
+.wordcamp-schedule__session.is-type-custom H4 A:hover {
+    text-decoration: none;
+}
+.wordcamp-schedule__session.is-type-custom H4+P {
+    display: none;
+}
+
 /* Schedule - Desktop */
 @media only screen and (min-width: 550px) {
     
@@ -917,8 +932,16 @@ h4.wordcamp-schedule__session-title {
     font-weight: normal;
 }
 
+.wordcamp-schedule__session.has-category-15min .wordcamp-schedule__session-title::after {
+    content: "15min";
+}
+
 .wordcamp-schedule__session.has-category-30min .wordcamp-schedule__session-title::after {
     content: "30min";
+}
+
+.wordcamp-schedule__session.has-category-90min .wordcamp-schedule__session-title::after {
+    content: "90min";
 }
 
 .wordcamp-schedule__session.has-category-120min-6060 .wordcamp-schedule__session-title::after {
