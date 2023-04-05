@@ -33,7 +33,7 @@ h1.wp-block-query-title {
 
 @media only screen and (max-width: 781px) {
     h1.wp-block-post-title,
-                                                                    h1.wp-block-query-title {
+                                                                            h1.wp-block-query-title {
         font-size: clamp(2rem, 6vw, 3.25rem);
     /* Avoid title wrapping in mobile by changing fist clamp value */
     }
@@ -41,7 +41,7 @@ h1.wp-block-query-title {
 
 @media only screen and (max-width: 389px) {
     h1.wp-block-post-title,
-                                                                    h1.wp-block-query-title {
+                                                                            h1.wp-block-query-title {
         font-size: clamp(1.6rem, 6vw, 3.25rem);
     /* Avoid title wrapping in mobile by changing fist clamp value */
     }
@@ -240,7 +240,7 @@ p.small {
 
 @media only screen and (max-width: 781px) {
     .home-cta p,
-                                                            .home-cta .wp-block-buttons {
+                                                                    .home-cta .wp-block-buttons {
         text-align: center !important;
         justify-content: center !important;
     }
@@ -599,14 +599,14 @@ footer .sponsors-container-home .microsponsors-footer {
 @media only screen and (max-width: 781px) {
     /* We're going desktop first here - Maybe change this to a higher resolution? */
     .wordcamp-sponsors.sponsors-community li,
-                                                            .wordcamp-sponsors.sponsors-afterparty li,
-                                                            .wordcamp-sponsors.sponsors-diamante li {
+                                                                    .wordcamp-sponsors.sponsors-afterparty li,
+                                                                    .wordcamp-sponsors.sponsors-diamante li {
         max-width: 46.5% !important;
     /* 2 per line */
     }
     
     .wordcamp-sponsors.sponsors-ouro li,
-                                    .wordcamp-sponsors.sponsors-media-partner li {
+                                            .wordcamp-sponsors.sponsors-media-partner li {
         max-width: 46.5% !important;
     /* 2 per line as they are 4 makes no sense to have 3 per line */
     }
@@ -642,19 +642,19 @@ body.single-wcb_sponsor main .wp-block-group.is-layout-constrained:last-child {
 /* Blog */
 @media only screen and (min-width: 782px) {
     body.blog ul.wp-block-post-template,
-                                                                    body.archive ul.wp-block-post-template {
+                                                                            body.archive ul.wp-block-post-template {
         overflow: hidden;
     }
     
     body.blog ul.wp-block-post-template li,
-                                                                            body.archive ul.wp-block-post-template li {
+                                                                                    body.archive ul.wp-block-post-template li {
         width: 48%;
         float: left;
         margin: 0 1%;
     }
     
     body.blog ul.wp-block-post-template li:nth-child(odd),
-                                                                            body.archive ul.wp-block-post-template li:nth-child(odd) {
+                                                                                    body.archive ul.wp-block-post-template li:nth-child(odd) {
         clear: both;
     }
 }
@@ -757,8 +757,8 @@ body.archive ul.wp-block-post-template a {
 
 @media only screen and (max-width: 781px) {
     .tix-attendee-form,
-    .tix-attendee-form tr,
-    .tix-attendee-form td {
+            .tix-attendee-form tr,
+            .tix-attendee-form td {
         display: block;
         width: 100% !important;
         box-sizing: border-box;
@@ -880,10 +880,19 @@ body.archive ul.wp-block-post-template a {
     display: none;
 }
 
+#wordcamp-schedule__session-2844 .wcb-session-favourite-icon {
+    display: none;
+}
+
 /* Schedule - Global */
+.wordcamp-schedule__date {
+    display: none;
+}
+
 .wordcamp-schedule__day {
     background-color: white !important;
 }
+
 .wordcamp-schedule__column-header {
 /*    background-color: #FAAF32 !important;*/
     background-color: #005280 !important;
@@ -894,15 +903,18 @@ body.archive ul.wp-block-post-template a {
     margin-right: 2px !important;
     border-bottom: 1px solid white !important;
 }
+
 .wordcamp-schedule__column-header.is-column-track-3-auditorio-c103-workshops {
-    margin-right: 0px !important;
+    margin-right: 0 !important;
 }
+
 .wordcamp-schedule__time-slot-header {
     z-index: 9999 !important;
     background-color: white !important;
     color: #0073B4 !important;
     box-shadow: none !important;
 }
+
 .wordcamp-schedule__session.is-type-custom {
 /*    background-color: #0073B4 !important; */
     background-color: rgba(0,115,180,0.75) !important;
@@ -911,9 +923,11 @@ body.archive ul.wp-block-post-template a {
     margin-bottom: 1px !important;
     box-shadow: none !important;
 }
+
 .wordcamp-schedule__session.is-type-custom a {
     color: white !important;
 }
+
 .wordcamp-schedule__day span,
 .wordcamp-schedule__day h1,
 .wordcamp-schedule__day h2,
@@ -928,20 +942,23 @@ body.archive ul.wp-block-post-template a {
 /* Schedule - Mobile */
 @media only screen and (max-width: 549.98px) {
     .wordcamp-schedule__time-slot-header,
-    .wordcamp-schedule__session {
+            .wordcamp-schedule__session {
         border-left: 0 !important;
         border-right: 0 !important;
     }
+    
     .wordcamp-schedule__time-slot-header {
         border-bottom: 2px solid rgba(0,115,180,0.75);
         margin-bottom: 1px !important;
         padding-top: 2em;
     }
+    
     .wordcamp-schedule__time-slot-header {
         text-align: left;
         font-size: 125%;
     }
 }
+
 /* Schedule - Desktop */
 @media only screen and (min-width: 550px) {
     .wordcamp-schedule__time-slot-header {
@@ -969,8 +986,9 @@ body.archive ul.wp-block-post-template a {
 
 /* Schedule - Languages */
 .wordcamp-schedule__session .wordcamp-schedule__session-speakers {
-    margin-top: 0.25em;
+    margin-top: .25em;
 }
+
 .wordcamp-schedule__session .wordcamp-schedule__session-speakers::before,
 .wordcamp-schedule__session .wordcamp-schedule__session-speakers::after {
     position: relative;
@@ -983,24 +1001,31 @@ body.archive ul.wp-block-post-template a {
     padding: 2px 4px;
     font-size: 70%;
 }
+
 .wordcamp-schedule__session .wordcamp-schedule__session-speakers::before {
     margin-right: .5em;
 }
+
 .wordcamp-schedule__session .wordcamp-schedule__session-speakers::after {
-    margin-left: .5em;    
+    margin-left: .5em;
 }
+
 .wordcamp-schedule__session.has-category-portugues .wordcamp-schedule__session-speakers::after {
     content: "POR";
 }
+
 .wordcamp-schedule__session.has-category-english .wordcamp-schedule__session-speakers::after {
     content: "ENG";
 }
+
 .wordcamp-schedule__session.has-category-espanhol .wordcamp-schedule__session-speakers::after {
     content: "ESP";
 }
+
 .wordcamp-schedule__session.has-category-galego .wordcamp-schedule__session-speakers::after {
     content: "GAL";
 }
+
 .wordcamp-schedule__session .wordcamp-schedule__session-speakers dd a {
     font-size: 120%;
 }
@@ -1009,6 +1034,7 @@ body.archive ul.wp-block-post-template a {
 .wordcamp-schedule__session {
     padding: 20px !important;
 }
+
 h4.wordcamp-schedule__session-title > a {
     font-size: 125% !important;
     color: #0073B4 !important;
@@ -1016,11 +1042,13 @@ h4.wordcamp-schedule__session-title > a {
     line-height: 1.25em;
     padding-right: .35em;
 }
+
 h4.wordcamp-schedule__session-title + p {
     display: none;
 }
+
 .is-type-session {
-    /* border-right: 1px solid #eff6fb !important; */
+/* border-right: 1px solid #eff6fb !important; */
 }
 
 /* Schedule - Duration */
@@ -1028,6 +1056,7 @@ h4.wordcamp-schedule__session-title {
     display: block;
     padding-right: 1.5em;
 }
+
 .wordcamp-schedule__session .wordcamp-schedule__session-title::after {
     position: relative;
     top: -1px;
@@ -1043,14 +1072,21 @@ h4.wordcamp-schedule__session-title {
 .wordcamp-schedule__session.has-category-15min .wordcamp-schedule__session-title::after {
     content: "15min";
 }
+
 .wordcamp-schedule__session.has-category-30min .wordcamp-schedule__session-title::after {
     content: "30min";
 }
+
 .wordcamp-schedule__session.has-category-90min .wordcamp-schedule__session-title::after {
     content: "90min";
 }
+
 .wordcamp-schedule__session.has-category-120min-6060 .wordcamp-schedule__session-title::after {
     content: "120min (60+60)";
+}
+
+.wordcamp-schedule__session.has-category-2h30min     .wordcamp-schedule__session-title::after {
+    content: "2h30min";
 }
 
 /* Schedule - Topics (all combinations...... order alphabetically inside each combination) */
@@ -1077,9 +1113,11 @@ h4.wordcamp-schedule__session-title {
     top: 15px;
     right: 15px;
 }
+
 div.wcb-session-favourite-icon a.fav-session-button[aria-pressed="true"] {
     color: #ffc81e !important;
 }
+
 .wcb-favourite-session {
     background-color: #eff6fb !important;
 }
@@ -1089,6 +1127,7 @@ h4.wordcamp-schedule__session-title + p,
 .wordcamp-schedule__session-category {
     color: red;
 }
+
 .wordcamp-schedule__session-category {
     display: none;
 }
